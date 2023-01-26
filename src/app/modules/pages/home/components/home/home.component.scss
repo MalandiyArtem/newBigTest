@@ -1,0 +1,82 @@
+@import './src/app/shared/variables.scss';
+
+.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .testClass {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 10px;
+    }
+
+    input {
+      background-color: $inputBgColor;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+      font-size: $inputNicknameSize;
+      border: none;
+      outline: none;
+    }
+
+    button {
+      // width: 50%;
+      // background-color: $joinActiveBgColorBtn;
+      // padding: 10px;
+      // border-radius: 5px;
+      // font-size: $joinBtnSize;
+      // border: 0;
+      // outline: none;
+      // cursor: pointer;
+      // transition: .3s;
+
+      .testClass {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 13px;
+        font-size: 20px;
+      }
+
+      &:disabled {
+        background-color: $joinDisabledBgColorBtn;
+        cursor: auto;
+        transition: .3s;
+      }
+    }
+  }
+}
+
+.controller {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  opacity: 0;
+  transition: .6s;
+}
+
+.active {
+  opacity: 1;
+  transition: .6s;
+}
+
+.fullscreen {
+  margin-right: 10px;
+  margin-bottom: 10px;
+}

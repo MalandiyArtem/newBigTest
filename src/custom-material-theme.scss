@@ -1,0 +1,90 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$main_palette: (
+  50: #e3f2fd,
+  100: #dde0f9,
+  200: #bbc2f3,
+  300: #9aa3ec,
+  400: #7885e6,
+  500: #5666e0,
+  600: #4552b3,
+  700: #343d86,
+  800: #22295a,
+  900: #11142d,
+     A100: #82b1ff,
+     A200: #448aff,
+     A400: #2979ff,
+     A700: #2962ff,
+     contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: rgba(black, 0.87),
+  400: rgba(black, 0.87),
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+     A100: rgba(black, 0.87),
+  A200: white,
+  A400: white,
+  A700: white,
+  ),
+);
+
+$accent_palette: (
+  50: #e3f2fd,
+  100: #f9d9fe,
+  200: #f3b3fd,
+  300: #ec8cfd,
+  400: #e666fc,
+  500: #e040fb,
+  600: #b333c9,
+  700: #862697,
+  800: #5a1a64,
+  900: #2d0d32,
+     A100: #ec8cfd,
+     A200: #e666fc,
+     A400: #e040fb,
+     A700: #b333c9,
+     contrast: (
+  50: rgba(black, 0.87),
+  100: rgba(black, 0.87),
+  200: rgba(black, 0.87),
+  300: rgba(black, 0.87),
+  400: rgba(black, 0.87),
+  500: white,
+  600: white,
+  700: white,
+  800: white,
+  900: white,
+     A100: rgba(black, 0.87),
+  A200: white,
+  A400: white,
+  A700: white,
+  ),
+);
+
+$my-theme-primary: mat.define-palette($main_palette, 500);
+$my-theme-accent: mat.define-palette($accent_palette, 500);
+$my-theme-warn: mat.define-palette(mat.$red-palette);
+
+$my-typography: mat.define-legacy-typography-config(
+  $font-family: 'Montserrat',
+);
+
+$my-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $my-theme-primary,
+      accent: $my-theme-accent,
+      warn: $my-theme-warn,
+    ),
+    typography: $my-typography,
+  )
+);
+
+@include mat.all-component-themes($my-theme);
+@include mat.core-theme($my-theme);

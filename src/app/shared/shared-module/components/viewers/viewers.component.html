@@ -1,0 +1,10 @@
+<div class="viewers-wrapper">
+  <app-total-viewers></app-total-viewers>
+  <div class="viewer-list">
+    <app-viewer
+      *ngFor="let viewer of viewersInfo"
+      [canEdit]="viewer.canEdit"
+      [viewerName]="viewer.userName"
+    ></app-viewer>
+  </div>
+</div>

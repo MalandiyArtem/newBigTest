@@ -1,0 +1,14 @@
+.viewers-wrapper {
+  height: 100%;
+
+  .viewer-list {
+    margin-top: 10px;
+    overflow: auto;
+    height: 100%;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+<div
+  class="webcam"
+  appIsFullscreen
+  [activeClass]="'webcam-fullscreen'"
+>
+  <video
+    playsinline
+    #webcamVideo
+    [muted]="isMuted"
+    preload="metadata"
+    (ended)="onVideoEnd()"
+    [autoplay]="isAutoplay"
+  >
+    <source [src]="source" type="video/mp4">
+    Browser not supported
+  </video>
+</div>

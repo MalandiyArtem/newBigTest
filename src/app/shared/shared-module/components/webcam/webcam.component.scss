@@ -1,0 +1,15 @@
+.webcam {
+  position: fixed;
+  bottom: 20px;
+  right: 0;
+
+  video {
+    width: 226px;
+    height: 163px;
+    pointer-events: none;
+  }
+}
+
+.webcam-fullscreen {
+  bottom: 45px;
+}

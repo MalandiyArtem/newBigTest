@@ -1,0 +1,46 @@
+@import './src/app/shared/variables.scss';
+
+.chat-wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .header {
+    border-bottom: 1px solid $tabBarBorderColor;
+    padding: 11px;
+    font-size: $labelPanelSize;
+  }
+
+  .chatBody {
+    height: 100%;
+    overflow: auto;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  form {
+    display: contents;
+
+    textarea {
+      margin: 10px;
+      padding: 5px 10px;
+      border-radius: 5px;
+      resize: none;
+      outline: none;
+      border: none;
+      background-color: $textareaBgColor;
+      caret-color: $white;
+      color: $white;
+      font-size: $chatTextSize;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "streams": {
+    "sha": "cce14ae28275cc4c59b4be5e04b0c9bd01d02568",
+    "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/trees/cce14ae28275cc4c59b4be5e04b0c9bd01d02568",
+    "treeEntries": [
+      {
+        "sha": "1ff0c423042b46cb1d617b81efb715defbe8054d",
+        "relativePath": ".gitattributes",
+        "name": ".gitattributes",
+        "showChildren": false,
+        "size": 2518,
+        "mode": "100644",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/1ff0c423042b46cb1d617b81efb715defbe8054d",
+        "type": 1,
+        "children": null
+      },
+      {
+        "sha": "9491a2fda28342ab358eaf234e1afe0c07a53d62",
+        "relativePath": ".gitignore",
+        "name": ".gitignore",
+        "showChildren": false,
+        "size": 6223,
+        "mode": "100644",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/9491a2fda28342ab358eaf234e1afe0c07a53d62",
+        "type": 1,
+        "children": null
+      },
+      {
+        "sha": "74fc254cdc20e7012bf6f89caf6bcf3e9e9c5cc6",
+        "relativePath": "README.md",
+        "name": "README.md",
+        "showChildren": false,
+        "size": 67,
+        "mode": "100644",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/74fc254cdc20e7012bf6f89caf6bcf3e9e9c5cc6",
+        "type": 1,
+        "children": null
+      },
+      {
+        "sha": "9c043688e750ee52153a072ec2e56c0a4021d11a",
+        "relativePath": "StringCalculator",
+        "name": "StringCalculator",
+        "showChildren": false,
+        "size": 0,
+        "mode": "040000",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/trees/9c043688e750ee52153a072ec2e56c0a4021d11a",
+        "type": 2,
+        "children": [
+          {
+            "sha": "f31f4cd7e754224c56fad2234a618abfa98eeeb6",
+            "relativePath": "StringCalculator/Properties",
+            "name": "Properties",
+            "showChildren": false,
+            "size": 0,
+            "mode": "040000",
+            "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/trees/f31f4cd7e754224c56fad2234a618abfa98eeeb6",
+            "type": 2,
+            "children": [
+              {
+                "sha": "4ad860e8760aab7781f138e4866fc771b1923dab",
+                "relativePath": "StringCalculator/Properties/AssemblyInfo.cs",
+                "name": "AssemblyInfo.cs",
+                "showChildren": false,
+                "size": 2015,
+                "mode": "100644",
+                "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/4ad860e8760aab7781f138e4866fc771b1923dab",
+                "type": 1,
+                "children": null
+              }
+            ]
+          },
+          {
+            "sha": "cd748675972bff2d9c38315c9a17908faf478529",
+            "relativePath": "StringCalculator/StringCalculator.cs",
+            "name": "StringCalculator.cs",
+            "showChildren": false,
+            "size": 1331,
+            "mode": "100644",
+            "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/cd748675972bff2d9c38315c9a17908faf478529",
+            "type": 1,
+            "children": null
+          },
+          {
+            "sha": "f49d32854a0e169ca526a1a60840df1b00335826",
+            "relativePath": "StringCalculator/StringCalculator.csproj",
+            "name": "StringCalculator.csproj",
+            "showChildren": false,
+            "size": 2176,
+            "mode": "100644",
+            "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/f49d32854a0e169ca526a1a60840df1b00335826",
+            "type": 1,
+            "children": null
+          }
+        ]
+      },
+      {
+        "sha": "6708bff26f4bc14b1425cdec726581ebbd092ea5",
+        "relativePath": "StringCalculatorTests",
+        "name": "StringCalculatorTests",
+        "showChildren": false,
+        "size": 0,
+        "mode": "040000",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/trees/6708bff26f4bc14b1425cdec726581ebbd092ea5",
+        "type": 2,
+        "children": [
+          {
+            "sha": "881a37544c39cecd4dfefaa2aad616ddd15fcd04",
+            "relativePath": "StringCalculatorTests/StringCalculatorTests.csproj",
+            "name": "StringCalculatorTests.csproj",
+            "showChildren": false,
+            "size": 578,
+            "mode": "100644",
+            "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/881a37544c39cecd4dfefaa2aad616ddd15fcd04",
+            "type": 1,
+            "children": null
+          },
+          {
+            "sha": "fce41a4f7c295c131c31494dc7f02c0cd1be68b6",
+            "relativePath": "StringCalculatorTests/Tests.cs",
+            "name": "Tests.cs",
+            "showChildren": false,
+            "size": 2492,
+            "mode": "100644",
+            "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/fce41a4f7c295c131c31494dc7f02c0cd1be68b6",
+            "type": 1,
+            "children": null
+          }
+        ]
+      },
+      {
+        "sha": "1415bd3dc0c87edd6abec9cca3368b610580539c",
+        "relativePath": "TDD-Kata-1-String-Calculator.sln",
+        "name": "TDD-Kata-1-String-Calculator.sln",
+        "showChildren": false,
+        "size": 1640,
+        "mode": "100644",
+        "url": "https://api.github.com/repos/Goseler/TDD-Kata-1-String-Calculator/git/blobs/1415bd3dc0c87edd6abec9cca3368b610580539c",
+        "type": 1,
+        "children": null
+      }
+    ]
+  },
+  "file-for-record": {
+    "content": "77u/dXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2Vu\nZXJpYzsKdXNpbmcgU3lzdGVtLlRleHQuUmVndWxhckV4cHJlc3Npb25zOwoK\nbmFtZXNwYWNlIFN0cmluZ0NhbGN1bGF0b3IKewoJcHVibGljIGNsYXNzIFN0\ncmluZ0NhbGN1bGF0b3IKCXsKCQlwdWJsaWMgaW50IEFkZChzdHJpbmcgaW5w\ndXQpCgkJewoJCQlpZiAoaW5wdXQuTGVuZ3RoID09IDApICAvLyBJbmNyZWFz\nZSBwZXJmb3JtYW5jZSBmb3IgZW1wdHkgc3RyaW5nCgkJCQlyZXR1cm4gMDsK\nCgkJCWludFtdIG51bWJlcnMgPSBFeHRyYWN0TnVtYmVycyhpbnB1dCk7CgkJ\nCWludCBzdW0gPSBTdW0obnVtYmVycyk7CgoJCQlyZXR1cm4gc3VtOwoJCX0K\nCgkJcHJpdmF0ZSBzdGF0aWMgaW50W10gRXh0cmFjdE51bWJlcnMoc3RyaW5n\nIGlucHV0KQoJCXsKCQkJdmFyIG51bWJlcnNTdHJpbmdzID0gUmVnZXguTWF0\nY2hlcyhpbnB1dCwgQCItP1xkKyIpOwoJCQlpbnRbXSBudW1iZXJzID0gQ29u\ndmVydFRvSW50QXJyYXkobnVtYmVyc1N0cmluZ3MpOwoJCQlDaGVja05lZ2F0\naXZlKG51bWJlcnMpOwoKCQkJcmV0dXJuIG51bWJlcnM7CgkJfQoKCQlwcml2\nYXRlIHN0YXRpYyBpbnRbXSBDb252ZXJ0VG9JbnRBcnJheShNYXRjaENvbGxl\nY3Rpb24gbnVtYmVyc1N0cmluZ3MpCgkJewoJCQlMaXN0PGludD4gbnVtYmVy\nc0xpc3QgPSBuZXcgTGlzdDxpbnQ+KCk7CgoJCQlmb3JlYWNoICh2YXIgaXRl\nbSBpbiBudW1iZXJzU3RyaW5ncykKCQkJewoJCQkJbnVtYmVyc0xpc3QuQWRk\nKENvbnZlcnQuVG9JbnQzMihpdGVtLlRvU3RyaW5nKCkpKTsKCQkJfQoJCQlp\nbnRbXSBudW1iZXJzID0gbnVtYmVyc0xpc3QuVG9BcnJheSgpOwoKCQkJcmV0\ndXJuIG51bWJlcnM7CgkJfQoKCQlwcml2YXRlIHN0YXRpYyBpbnQgU3VtKGlu\ndFtdIG51bWJlcnMpCgkJewoJCQlpbnQgc3VtID0gMDsKCgkJCWZvcmVhY2gg\nKGludCBudW1iZXIgaW4gbnVtYmVycykKCQkJCWlmIChudW1iZXIgPCAxMDAw\nKQoJCQkJCXN1bSArPSBudW1iZXI7CgoJCQlyZXR1cm4gc3VtOwoJCX0KCgkJ\ncHJpdmF0ZSBzdGF0aWMgdm9pZCBDaGVja05lZ2F0aXZlKGludFtdIG51bWJl\ncnMpCgkJewoJCQlzdHJpbmcgZXhjZXB0aW9uTnVtYmVycyA9ICIiOwoKCQkJ\nZm9yZWFjaCAoaW50IG51bWJlciBpbiBudW1iZXJzKQoJCQkJaWYgKG51bWJl\nciA8IDApCgkJCQkJZXhjZXB0aW9uTnVtYmVycyArPSBzdHJpbmcuRm9ybWF0\nKCJ7MH0gIiwgbnVtYmVyKTsKCgkJCWlmIChleGNlcHRpb25OdW1iZXJzLkxl\nbmd0aCAhPSAwKQoJCQkJdGhyb3cgbmV3IEFyZ3VtZW50RXhjZXB0aW9uKGV4\nY2VwdGlvbk51bWJlcnMpOwoJCX0KCX0KfQo=\n",
+    "size": 1331,
+    "encoding": 1,
+    "sha": "cd748675972bff2d9c38315c9a17908faf478529"
+  }
+}

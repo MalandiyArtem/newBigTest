@@ -1,0 +1,19 @@
+<div class="workspace-container">
+  <app-tabs
+    class="tabs-editor"
+  >
+    <app-tab
+      [active]="true"
+      [filePath]="hostFilePath"
+      [isCloseable]="false"
+      [isHostTab]="true"
+      [title]="hostFileTitle"
+    >
+      <div class="editor">
+<!--        <ngx-monaco-editor [(ngModel)]="code" [options]="editorOptions"></ngx-monaco-editor>-->
+      </div>
+    </app-tab>
+  </app-tabs>
+  <ng-content></ng-content>
+</div>
+

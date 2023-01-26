@@ -1,0 +1,44 @@
+<ul *ngIf="treeData">
+  <li *ngFor="let node of treeData"
+      [ngClass]="node.relativePath === activePath && !node.children ? 'active' : ''"
+  >
+    <button
+      (click)="toggleChild(node)"
+      type="button"
+    >
+      <span *ngIf="node.children; else file">
+      <img
+        *ngIf="node.showChildren; else closedParent"
+        alt="folder"
+        src="./assets/img/openedFolderPurple.svg"
+      >
+    </span>
+      <span> {{ node.name }} </span>
+    </button>
+    <app-tree
+      [hidden]="!node.showChildren"
+      [tabsComponent]="tabsComponent"
+      [treeData]="node.children">
+    </app-tree>
+  </li>
+</ul>
+
+<ng-template #newTab>
+  <div class="editor">
+<!--    <ngx-monaco-editor [ngModel]="code" [options]="editorOptions" class="monacoComponent"></ngx-monaco-editor>-->
+  </div>
+</ng-template>
+
+<ng-template #closedParent>
+  <img
+    alt="folder"
+    src="./assets/img/closedFolderPurple.svg"
+  >
+</ng-template>
+
+<ng-template #file>
+  <img
+    alt="file"
+    src="./assets/img/file.svg"
+  >
+</ng-template>

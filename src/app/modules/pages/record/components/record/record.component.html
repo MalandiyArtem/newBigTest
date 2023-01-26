@@ -1,0 +1,118 @@
+<div
+  appIsFullscreen
+  [activeClass]="'record-fullscreen'"
+  appIsIframe
+  class="record-container"
+>
+  <div class="sidebar"
+       appIsFullscreen
+       [activeClass]="'sidebar-fullscreen'"
+  >
+    <div class="actions">
+      <button class="git-action"><img src="./assets/img/githubWhite.svg" alt="git"></button>
+      <button class="file-tree-action active"><img src="assets/img/openedFolderWhite.svg" alt="folder"></button>
+    </div>
+    <div class="file-tree-section">
+      <div class="title">
+        <span>Folder tree</span>
+      </div>
+      <div class="file-tree">
+      </div>
+    </div>
+  </div>
+  <div class="workspace">
+    <div class="editor">
+      <div class="monacoContainer" id="monacoContainer">
+        <p class="currentFileName">{{ currentFileName }}</p>
+      </div>
+    </div>
+    <div
+      [activeClass]="'active'"
+      appControl class="controller"
+    >
+      <mat-grid-list cols="20">
+        <mat-grid-tile colspan="1">
+          <button
+            [activeClass]="'playPause-fullscreen'"
+            appIsFullscreen
+            class="playPauseBtn"
+            type="button"
+            (click)="onPlayPauseClick()"
+          >
+            <img *ngIf="!isPlaying; else paused" alt="play" src="./assets/img/playRecord.svg">
+          </button>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <div
+            [activeClass]="'mute-fullscreen'"
+            appIsFullscreen
+            class="mute"
+            (click)="onMuteClick()"
+          >
+            <button
+              type="button"
+            >
+              <img *ngIf="!isMuted; else muted" alt="sound" src="./assets/img/playSound.svg">
+            </button>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile class="tile-slider" colspan="15">
+          <mat-slider
+            class="slider"
+            color="primary"
+            [disabled]="false"
+            [max]="recordDurationSec"
+            [min]="0"
+            [step]="1"
+            [discrete]="true"
+            [displayWith]="formatLabel"
+          >
+            <div *ngFor="let timeMark of timeMarks"
+                 class="point"
+                 [ngStyle]="{left: timeMark.position - 1 + '%'}"
+                 [matTooltip]="timeMark.title"
+                 (click)="dragEnd(timeMark.timeInSec)"
+            ></div>
+            <input
+              [disabled]="sliderDisabled"
+              matSliderThumb
+              [value]="currentTimePositionSec || 0"
+              (dragEnd)="dragEnd($event)"
+            >
+          </mat-slider>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="2">
+          <div
+            [activeClass]="'time-fullscreen'"
+            appIsFullscreen
+            class="time"
+          >
+            <span>{{currentTimePositionSecString}}</span>
+            <span>/</span>
+            <span>{{recordDurationSecString}}</span>
+          </div>
+        </mat-grid-tile>
+        <mat-grid-tile colspan="1">
+          <app-fullscreen></app-fullscreen>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </div>
+    <app-webcam
+      source="assets/img/cam.mp4"
+      [isAutoplay]="false"
+      [isMuted]="isMuted"
+      (videoEndedChange)="onVideoEnded()"
+      (timeSecUpdate)="onTimeSecUpdate($event)"
+      (videoInit)="initCam($event)"
+    ></app-webcam>
+    <app-fullscreen></app-fullscreen>
+  </div>
+</div>
+
+<ng-template #muted>
+  <img alt="sound" src="./assets/img/offSound.svg">
+</ng-template>
+
+<ng-template #paused>
+  <img *ngIf="isPlaying; else paused" alt="play" src="./assets/img/pauseRecord.svg">
+</ng-template>

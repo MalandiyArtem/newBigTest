@@ -1,0 +1,17 @@
+@import './src/app/shared/variables.scss';
+
+.viewer-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3px 14px 10px;
+
+  .viewer-name {
+    font-size: $viewerNameSize;
+    margin-right: 15px;
+  }
+
+  img {
+    padding-right: 10px;
+  }
+}

@@ -1,0 +1,222 @@
+@import "./src/app/shared/variables.scss";
+
+.record-container {
+  width: 100%;
+  height: 100vh;
+}
+
+.record-fullscreen {
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  display: none;
+}
+
+.sidebar-fullscreen {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+}
+
+.actions {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 15px 15px 10px 15px;
+  border-right: 1px solid $tabBarBorderColor;
+
+  .git-action, .file-tree-action {
+    width: fit-content;
+    background-color: transparent;
+    border: 0;
+    padding: 8px 10px 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 18px;
+    transition: .4s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $sidebarTabActiveBgColor;
+      transition: .4s;
+    }
+
+    img {
+      padding: 8px;
+      width: 20px;
+    }
+  }
+
+  .active {
+    background-color: $sidebarTabActiveBgColor;
+    box-shadow: $sidebarTabActiveShadow;
+    transition: .4s;
+  }
+}
+
+.file-tree-section {
+  height: 100%;
+  width: 100%;
+  border-right: 1px solid $tabBarBorderColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+
+  .title {
+    display: inline-flex;
+    height: fit-content;
+    padding: 20px;
+    border-bottom: 1px solid $tabBarBorderColor;
+
+    span {
+      font-weight: bold;
+    }
+  }
+}
+
+.workspace {
+  width: 100%;
+  height: 100%;
+
+  .editor {
+    width: 100%;
+    height: 100%;
+
+    .monacoContainer{
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.currentFileName {
+  position: relative;
+  width: 80%;
+  background-color: $monacoBackground;
+  left: 3%;
+  padding: 10px;
+  color: whitesmoke;
+  font-size: 13px;
+  z-index: 10;
+}
+
+.controller {
+  position: absolute;
+  right: 0;
+  bottom: 5px;
+  left: 0;
+  margin: auto;
+  width: 100%;
+  opacity: 0;
+  transition: .6s;
+  z-index: 3;
+  animation: fadeIn 1s;
+}
+
+.active {
+  opacity: 1;
+  transition: .6s;
+}
+
+.playPauseBtn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  img {
+    width: 2.5vw;
+    animation: fadeIn 1s;
+  }
+}
+
+.playPause-fullscreen {
+  img {
+    width: 2vw;
+  }
+}
+
+.mute {
+  button {
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+
+    img {
+      width: 2.5vw;
+      animation: fadeIn 1s;
+    }
+  }
+}
+
+.mute-fullscreen {
+  button {
+    img {
+      width: 2vw;
+    }
+  }
+}
+
+.tile-slider {
+  overflow: inherit;
+}
+
+.slider {
+  width: 100%;
+}
+
+.mat-mdc-slider ::ng-deep.mdc-slider__thumb-knob {
+  width: 10px;
+  height: 10px;
+  border-width: 0;
+}
+
+.mat-mdc-slider ::ng-deep.mat-ripple {
+  height: 0;
+  width: 0;
+}
+
+.time {
+  width: fit-content;
+  font-size: 12px;
+}
+
+.time-fullscreen {
+  font-size: 17px;
+}
+
+.point {
+  width: 4px;
+  height: 4px;
+  background-color: #e040fb;
+  position: absolute;
+  top: 22px;
+  z-index: 1;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-ms-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}

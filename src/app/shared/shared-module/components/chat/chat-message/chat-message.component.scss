@@ -1,0 +1,35 @@
+@import './src/app/shared/variables.scss';
+
+.message-wrapper {
+  margin-top: 8px;
+  margin-bottom: 17px;
+  padding: 0 10px;
+
+  .message-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .username {
+      font-size: $chatUsernameSize;
+      margin-left: 3px;
+    }
+
+    .time {
+      font-size: $chatTimeSize;
+      margin-right: 5px;
+      color: $messageTimeColor
+    }
+  }
+
+  .message-text {
+    margin-left: 3px;
+    margin-top: 5px;
+    font-size: $chatTextSize;
+
+    span {
+      word-break: break-word;
+    }
+  }
+}
+

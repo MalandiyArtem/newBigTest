@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .frame{
+      margin: 100px auto;
+      width: 802px;
+      height: 451px;
+    }
+  </style>
+</head>
+<body>
+<div class="frame">
+  <iframe
+    title="Livecode player"
+    id="livecode"
+    src="http://localhost:4200/home/record/0003ccc7-3d95-cd52-ef18-3a03e4761332"
+    height="100%"
+    width="100%"
+    allowfullscreen
+    frameborder="0"
+  >
+  </iframe>
+</div>
+<script>
+  (function(){
+    const child = document.getElementById('livecode');
+    child.onload = function() {
+      child.contentWindow.postMessage({ token: '123456' }, "*");
+    }
+  }());
+</script>
+</body>
+</html>

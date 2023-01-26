@@ -1,0 +1,39 @@
+<div appIsIframe class="home-wrapper">
+  <div *ngIf="hasAccess; else noAccess" class="home">
+    <form
+      (ngSubmit)="onSubmit()"
+      [formGroup]="form"
+    >
+      <input
+        [(ngModel)]="value"
+        formControlName="userName"
+        maxlength="20"
+        placeholder="Enter your nickname"
+        type="text"
+      >
+      <button
+        [disabled]="form.invalid"
+        type="submit"
+      >Join
+      </button>
+
+      <button
+        disabled="false"
+      >
+        Enter your surname
+      </button>
+
+      <input type="password" value="{{ valueInterval }}">
+    </form>
+  </div>
+  <div
+    [activeClass]="'active'" appControl
+    class="controller"
+  >
+    <app-fullscreen class="fullscreen"></app-fullscreen>
+  </div>
+</div>
+
+<ng-template #noAccess>
+  <h3>You don't have access to our module</h3>
+</ng-template>

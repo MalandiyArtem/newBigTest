@@ -1,0 +1,16 @@
+<div
+  [activeClass]="'stream-container-fullscreen'"
+  appIsFullscreen
+  appIsIframe
+  class="stream-container"
+>
+  <div>
+    <app-sidebar appIsFullscreen></app-sidebar>
+  </div>
+  <app-workspace>
+    <span>Hello world</span>
+  </app-workspace>
+  <app-webcam
+    [source]="videoSource"
+  ></app-webcam>
+</div>

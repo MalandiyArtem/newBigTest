@@ -1,0 +1,40 @@
+@import './src/app/shared/variables.scss';
+
+ul {
+  list-style: none;
+  padding-left: 7px;
+  width: 100%;
+}
+
+li {
+  width: 100%;
+
+  button {
+    padding: 4px 9px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    text-align: left;
+    background: transparent;
+    color: $white;
+    font-size: $treeButtonSize;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .active {
+    background-color: $activeFileBgColor;
+  }
+
+  img {
+    width: 10px;
+    margin-right: 6px;
+  }
+}
+
+.editor {
+  height: 100%;
+}

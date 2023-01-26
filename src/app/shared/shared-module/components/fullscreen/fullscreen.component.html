@@ -1,0 +1,13 @@
+<button
+  (click)="fullscreenToggle()"
+  appIsFullscreen
+  [activeClass]="'full-btn-fullscreen'"
+  class="full-btn"
+  type="button"
+>
+  <img *ngIf="!isFullScreen; else fullscreen" alt="fullscreen" src="./assets/img/fullscreen.svg">
+</button>
+
+<ng-template #fullscreen>
+  <img alt="fullscreen" src="./assets/img/fullscreenExit.svg">
+</ng-template>

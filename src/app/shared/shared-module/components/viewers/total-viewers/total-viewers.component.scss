@@ -1,0 +1,28 @@
+@import './src/app/shared/variables.scss';
+
+.viewers-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  border-bottom: 1px solid $tabBarBorderColor;
+  padding: 13px 10px;
+
+  .title {
+    font-size: $labelPanelSize;
+  }
+
+  .amount-of-viewers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    span {
+      font-size: $viewersCounterSize;
+      margin-right: 3px;
+    }
+
+    img {
+      width: 13px;
+    }
+  }
+}

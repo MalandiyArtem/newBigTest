@@ -1,0 +1,29 @@
+<div class="sidebar-container">
+  <app-tabs
+    [activeTabByDefault]="1"
+  >
+    <app-tab
+      [disabled]="true"
+      tabImage="assets/img/githubWhite.svg">
+    </app-tab>
+    <app-tab tabImage="assets/img/openedFolderWhite.svg">
+      <div class="treeLabel">
+        <span>Folder tree</span>
+      </div>
+      <div class="tree-wrapper">
+        <app-tree
+          [tabsComponent]="dynamicTabsComponent"
+          [treeData]="nodes"
+          class="tree"
+        >
+        </app-tree>
+      </div>
+    </app-tab>
+    <app-tab class="panelTab" tabImage="assets/img/rocket.svg">
+      <app-panel class="panel">
+        <app-chat class="chat"></app-chat>
+        <app-viewers class="viewers"></app-viewers>
+      </app-panel>
+    </app-tab>
+  </app-tabs>
+</div>

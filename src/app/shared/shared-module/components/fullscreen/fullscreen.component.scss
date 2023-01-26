@@ -1,0 +1,17 @@
+.full-btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+
+  img {
+    width: 2.5vw;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.full-btn-fullscreen {
+  img {
+    width: 2vw;
+  }
+}

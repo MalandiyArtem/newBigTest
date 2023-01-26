@@ -1,0 +1,24 @@
+<div class="chat-wrapper">
+  <div class="header">
+    <span>Chat</span>
+  </div>
+  <div #chatBody class="chatBody">
+    <app-chat-message
+      *ngFor="let message of messages"
+      [messageText]="message.text"
+      [messageTime]="message.time"
+      [userName]="message.userName"
+    ></app-chat-message>
+  </div>
+  <form
+    (keydown.enter)="submit($event)"
+  >
+  <textarea
+    [(ngModel)]="message"
+    [cols]="10"
+    [placeholder]="'Sent a message...'"
+    [rows]="4"
+    name="form"
+  ></textarea>
+  </form>
+</div>

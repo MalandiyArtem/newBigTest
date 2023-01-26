@@ -1,0 +1,39 @@
+<div class="tabContainer">
+  <div
+    [activeClass]="'tabButtons-hide'"
+    [addClassInSmallScreen]="true"
+    appIsFullscreen
+    class="tabButtons"
+  >
+    <!--  static tabs -->
+    <button
+      (click)="selectTab(tab)"
+      *ngFor="let tab of staticTabs"
+      [ngClass]="tab.active ? 'tab-btn host-tab active' : 'tab-btn host-tab'"
+    >
+      <img *ngIf="tab.tabImage" [src]="tab.tabImage">
+      <span *ngIf="tab.title">{{ tab.title }}</span>
+    </button>
+
+    <!--  dynamic tabs -->
+    <button
+      (click)="selectTab(tab)"
+      *ngFor="let tab of dynamicTabs"
+      [ngClass]="tab.active ? 'tab-btn active' : 'tab-btn'"
+    >
+      <img *ngIf="tab.tabImage" [src]="tab.tabImage">
+      <span
+        *ngIf="tab.title"
+        class="tabTitle">{{ tab.title }}
+      </span>
+      <span
+        (click)="closeTab(tab)"
+        *ngIf="tab.isCloseable"
+        class="tab-close">x</span>
+    </button>
+  </div>
+  <div class="tabsContent">
+    <ng-content></ng-content>
+    <ng-template appDynamicTabs></ng-template>
+  </div>
+</div>

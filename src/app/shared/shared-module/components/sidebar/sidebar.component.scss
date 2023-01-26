@@ -1,0 +1,94 @@
+@import './src/app/shared/variables.scss';
+
+.sidebar-container {
+  height: 100vh;
+  width: 100%;
+  box-shadow: $sidebarShadow;
+  box-sizing: border-box;
+
+  .tabContainer {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+
+    .tabComponent {
+      height: 100%;
+    }
+
+    .tabButtons {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 15px 15px 10px 15px;
+      border-right: 1px solid $tabBarBorderColor;
+
+      .tab-btn {
+        background-color: transparent;
+        border: 0;
+        padding: 8px 10px 8px 10px;
+        border-radius: 5px;
+        margin-bottom: 18px;
+        transition: .4s;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $sidebarTabActiveBgColor;
+          transition: .4s;
+        }
+
+        img {
+          width: 20px;
+        }
+      }
+
+      .active {
+        background-color: $sidebarTabActiveBgColor;
+        box-shadow: $sidebarTabActiveShadow;
+        transition: .4s;
+      }
+    }
+
+    .tabsContent {
+      overflow: auto;
+      width: 100%;
+    }
+
+    .treeLabel {
+      font-size: $labelPanelSize;
+      border-bottom: 1px solid $labelBorderColor;
+      padding: 11px 10px 13px 14px
+    }
+
+    .tree-wrapper {
+      overflow: auto;
+      margin-right: 10px;
+      margin-top: 7px;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+
+  .panelTab {
+    height: 100%;
+    width: 100%;
+
+    .panel {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+
+      .chat {
+        height: 46%;
+        border-bottom: 1px solid $labelBorderColor;
+      }
+
+      .viewers {
+        height: 45%;
+      }
+    }
+  }
+}

@@ -1,0 +1,85 @@
+@import './src/app/shared/variables.scss';
+
+.workspace-container {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+
+  .tabContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+
+    .tabButtons {
+      display: flex;
+      flex-direction: row;
+      border-right: 1px solid $tabBarBorderColor;
+      overflow: auto;
+      scrollbar-width: none;
+
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
+      .tab-btn {
+        flex-shrink: 0;
+        min-width: 160px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: $fileTabShadow;
+        background-color: transparent;
+        border: 0;
+        padding: 6px 10px;
+        border-radius: 5px;
+        margin-bottom: 18px;
+        transition: .4s;
+        cursor: pointer;
+        font-size: $fileTabTitleSize;
+        box-sizing: border-box;
+
+        &:hover {
+          background-color: $sidebarTabActiveBgColor;
+          transition: .4s;
+        }
+
+        img {
+          width: 20px;
+        }
+
+        .tab-close {
+          font-size: $fileTabCloseSize;
+          margin-left: 20px;
+        }
+
+        .tabTitle {
+          margin-left: 10px;
+        }
+      }
+
+      .host-tab {
+        border-bottom: 1px solid $hostTabBorderColor;
+      }
+
+      .active {
+        background-color: $sidebarTabActiveBgColor;
+        box-shadow: $sidebarTabActiveShadow;
+        transition: .4s;
+      }
+    }
+
+    .tabsContent {
+      height: 100%;
+    }
+
+    .tabComponent {
+      height: 100%;
+
+      .editor {
+        height: 100%;
+      }
+    }
+  }
+}

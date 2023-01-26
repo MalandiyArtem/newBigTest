@@ -1,0 +1,47 @@
+@import './src/app/shared/variables.scss';
+* {
+  padding: 0;
+  margin: 0;
+  font-family: $mainFont;
+  color: $white;
+}
+
+body {
+  background-color: $mainBgColor;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: "Montserrat", sans-serif; }
+
+.remoteCursor{
+  background: transparent!important;
+  width: max-content !important;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    top: 0;
+    left: 1px;
+    height: 19px;
+    border-radius: 10px;
+    background-color: #5666e0;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-name: blinking;
+  }
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
