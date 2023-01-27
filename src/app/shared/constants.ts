@@ -19,7 +19,7 @@ export const CONSTANTS = {
       GET_FILE_FOR_RECORD: `${environment.apiUrl}/api/app/stream/file-for-livePage`,
       GET_RECORD_INFO: `${environment.apiUrl}/api/app/stream/record-info-test`,
     },
-
+1234567890123456789012345678901234567890
     BROADCASTING: {
       STUN_SERVER: 'stun:stun.l.google.com:19302',
     },
