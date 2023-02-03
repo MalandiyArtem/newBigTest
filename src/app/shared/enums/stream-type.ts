@@ -1,5 +1,3 @@
-export enum StreamType {
-  Undefined = 'unknown',
-  Stream = 'stream',
-  Record = 'record',
-}
+export enum StreamType 
+
+
