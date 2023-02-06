@@ -1,31 +1,24 @@
-1234567890
 import * as monaco from 'monaco-editor';
 import { environment } from '../../environments/environment';
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 4
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950
-qwertyuiopasdfghjklzxcvbnmqwertyuioasdfghjklzxcvbnmqwertyuiopoasdfghjklzxcvbnm
-12345678901234567890123456789012345678901234567890
-qwertyuiopasdfghjklzxcvbnmqwertyuioasdfghjkzxcvbnmqwertyuiopasdfghjkzxcbvnmdjrycbhdbsfjhdsgfrefyuerhgfoweruiyfgherfyeug
+
 export const CONSTANTS = {
-  123444443qwqwertryrtytrtyrytyuiyiuyiuyytrytrytrytytrfhgfhgfhgfhgfjtyfjhgfhjgfjhgfhgf
   URLS: {
     CONVERGENCE_URL: 'https://liveshare.advantiss.ml/realtime/convergence/default',
-123456789101112131415161718192021222324252627282923012345563738383282373287823287
     GITHUB: {
       GET_FILE_TEXT: 'https://api.github.com/repos/{ownerName}/{repoName}/contents/{pathToFile}?ref={hash}',
     },
-12345671234567
+
     LIVECODE_ENDPOINTS: {
       GET_TREE_FOR_RECORD: `${environment.apiUrl}/api/app/stream/file-tree-for-record`,
       GET_FILE_FOR_RECORD: `${environment.apiUrl}/api/app/stream/file-for-livePage`,
       GET_RECORD_INFO: `${environment.apiUrl}/api/app/stream/record-info-test`,
     },
-1234567890123456789012345678901234567890
+
     BROADCASTING: {
       STUN_SERVER: 'stun:stun.l.google.com:19302',
     },
   },
-123456789
+
   TEMP: {
     URLS: {
       CONVERGENCE_URL: '',
