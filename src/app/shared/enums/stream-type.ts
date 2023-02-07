@@ -1,1 +1,5 @@
-export enum StreamType 
+// export enum StreamType 
+export class LiveStreamComponent {
+
+    
+}
