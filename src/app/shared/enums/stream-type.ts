@@ -1,10 +1,5 @@
-// // export enum StreamType 
-// export class LiveStreamComponent {
+// export enum StreamType 
+export class LiveStreamComponent {
 
 
-test
-yes
-hello
-
-
-// }
+}
