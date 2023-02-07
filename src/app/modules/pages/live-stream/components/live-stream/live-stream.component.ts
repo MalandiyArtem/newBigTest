@@ -25,6 +25,8 @@ export class LiveStreamComponent implements OnInit, OnDestroy {
     
   }
 
+  showMessage
+
   ngOnInit(): void {
     // this.chatservice.testFunction(1);
     // this.chatservice.returnTestVariable().subscribe(value => {
