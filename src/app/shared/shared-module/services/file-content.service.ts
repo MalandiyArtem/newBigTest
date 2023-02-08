@@ -9,9 +9,13 @@ export class FileContentService {
     return 'false';
   }
 
-
-
-  myFunc() {
-    console.log('Help');
+  myFunc_2(arg1: number, arg2: number) {
+    if (arg1 < arg2) {
+      return arg1 + arg2
+    } else if (arg1 === arg2) {
+      return 0
+    } else {
+      return arg1 - arg2
+    }
   }
 }

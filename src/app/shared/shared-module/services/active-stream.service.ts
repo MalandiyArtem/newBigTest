@@ -7,19 +7,19 @@ import { StreamType } from '../../enums/stream-type';
   providedIn: 'root',
 })
 export class ActiveStreamService {
-  private streamId$ = new ReplaySubject(1);
-  private streamType$ = new ReplaySubject(1);
+  // private streamId$ = new ReplaySubject(1);
+  // private streamType$ = new ReplaySubject(1);
 
-  setStreamInfo(streamId: Guid, streamType: StreamType) {
-    this.streamId$.next(streamId);
-    this.streamType$.next(streamType);
-  }
+  // setStreamInfo(streamId: Guid, streamType: StreamType) {
+  //   this.streamId$.next(streamId);
+  //   this.streamType$.next(streamType);
+  // }
 
-  getStreamId() {
-    return this.streamId$.asObservable();
-  }
+  // getStreamId() {
+  //   return this.streamId$.asObservable();
+  // }
 
-  getStreamType() {
-    return this.streamType$.asObservable();
-  }
+  // getStreamType() {
+  //   return this.streamType$.asObservable();
+  // }
 }

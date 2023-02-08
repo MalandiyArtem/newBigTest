@@ -1,5 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/shared/shared-module/services/chat.service';
+import { FileContentService } from 'src/app/shared/shared-module/services/file-content.service';
 import { ConvergenceService } from '../../../../../shared/shared-module/services/convergence.service';
 import { WebcamBroadcastService } from '../../../../../shared/shared-module/services/webcam-broadcast.service';
 
@@ -11,12 +12,27 @@ import { WebcamBroadcastService } from '../../../../../shared/shared-module/serv
 export class LiveStreamComponent implements OnInit, OnDestroy {
   videoSource?: MediaStream;
   testVar = 0;
+  secondTestVariable: number | null = null;
 
   constructor(
     private convergenceService: ConvergenceService,
     private webcamBroadcast: WebcamBroadcastService,
     private chatservice: ChatService,
+    private fileContentService: FileContentService
   ) {
+  }
+
+  // This is the end of this recording. And I hope cutting will work well!
+  // 3... 2... 1... boom!
+
+  showMessage() {
+    console.log('This is my 4th attempt to record this large video');
+    const valueFromHelp = this.helpMethod();
+    this.secondTestVariable = this.fileContentService.myFunc_2(valueFromHelp, 10);
+  }
+
+  helpMethod() {
+    return 2 + 2;
   }
 
   ngOnInit(): void {

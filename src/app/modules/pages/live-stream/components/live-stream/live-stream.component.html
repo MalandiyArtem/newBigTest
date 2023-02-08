@@ -6,6 +6,17 @@
 >
   <div>
     <app-sidebar appIsFullscreen></app-sidebar>
+    <button
+      type="button"
+      class="my_test_btn"
+      (click)="showMessage()"
+    >
+      Click me!
+    </button>
+
+    <span>
+      {{ secondTestVariable }}
+    </span>
   </div>
   <app-workspace>
     <span>Hello world</span>

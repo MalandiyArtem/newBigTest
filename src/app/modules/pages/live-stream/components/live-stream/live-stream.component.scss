@@ -8,6 +8,15 @@
   grid-template-columns: 20.3vw 79.7vw;
 }
 
+.my_test_btn {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  background-color: rgba(250, 255, 201, 0.179);
+}
+
 .controller {
   position: absolute;
   right: 0;
