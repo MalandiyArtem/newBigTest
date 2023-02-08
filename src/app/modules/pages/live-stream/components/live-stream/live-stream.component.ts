@@ -1,6 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ChatService } from 'src/app/shared/shared-module/services/chat.service';
-import { IframeService } from 'src/app/shared/shared-module/services/iframe.service';
 import { ConvergenceService } from '../../../../../shared/shared-module/services/convergence.service';
 import { WebcamBroadcastService } from '../../../../../shared/shared-module/services/webcam-broadcast.service';
 
@@ -17,29 +16,15 @@ export class LiveStreamComponent implements OnInit, OnDestroy {
     private convergenceService: ConvergenceService,
     private webcamBroadcast: WebcamBroadcastService,
     private chatservice: ChatService,
-    private iframeService: IframeService,
   ) {
   }
 
-  showMessage() {
-    
-  }
-
-  showMessage
-
-
-
-  showMessage
-
   ngOnInit(): void {
-    // this.chatservice.testFunction(1);
-    // this.chatservice.returnTestVariable().subscribe(value => {
-    //   this.testVar = value;
-    // });
-
-    this.iframeService.getIframeMethod().subscribe((value: boolean) => {
-      console.log(value);
+    this.chatservice.testFunction(1);
+    this.chatservice.returnTestVariable().subscribe(value => {
+      this.testVar = value;
     });
+
 
     const sessionID = this.convergenceService.getSessionId();
     const username = this.convergenceService.getUserName();
@@ -54,11 +39,6 @@ export class LiveStreamComponent implements OnInit, OnDestroy {
     window.onbeforeunload = () => {
       this.closeWSConnection();
     };
-  }
-
-  showMessage() {
-    console.log('This is the message emmitted by clicking on the button');
-    this.iframeService.iframeMethod();
   }
 
   ngOnDestroy(): void {

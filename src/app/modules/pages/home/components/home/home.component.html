@@ -19,6 +19,28 @@
 
       <button
         disabled="false"
+        (click)="pressMeHandler()"
+      >
+        Press me
+      </button>
+
+      <button
+      type="button"
+      (click)="pressMeHandler2('Test me value 2')"
+      >
+        Press me 2
+      </button>
+
+      <span
+        class="testClassForSpan_2"
+      >
+        {{ testValueFromMetod }}
+      </span>
+
+      <span class="testClassForSpan">{{ valueFromTreeService }}</span>
+
+      <button
+        disabled="false"
       >
         Enter your surname
       </button>

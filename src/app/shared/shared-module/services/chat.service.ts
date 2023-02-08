@@ -5,15 +5,8 @@ import { IChatMessage } from '../../interfaces/chatMessage.interface';
 @Injectable({
   providedIn: 'root',
 })
+
 export class ChatService {
-/**
- * This section made for test cut recording
- * After this words I have to make a cut
- * I am going to cut this phrase. But it was only the first cut
- */
-
-
-
   private messages: IChatMessage[] = [];
   private value = 0;
   private testVariable$ = new BehaviorSubject<number>(0);
@@ -43,12 +36,4 @@ export class ChatService {
   returnTestVariable() {
     return this.testVariable2$.asObservable;
   }
-
-  // testFunction(value: number) {
-  //   this.testVariable$.next(value);
-  // }
-
-  // returnTestVariable() {
-  //   return this.testVariable$.asObservable;
-  // }
 }

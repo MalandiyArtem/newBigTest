@@ -11,7 +11,7 @@ export class ActiveFileService {
     this.activeFilePath$.next(path);
   }
 
-  getActiveFile() {
+  testActiveFile(path: string) {
     return this.activeFilePath$.asObservable();
   }
 }

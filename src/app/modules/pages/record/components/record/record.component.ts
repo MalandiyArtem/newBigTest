@@ -1,3 +1,13 @@
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1234512345
+1234567890
+123456789012345678901234567890
+q w e r t y u i o a s d f g h j k l z x c v b n m ,
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 290
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 29 130
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20
 import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import * as monaco from 'monaco-editor';
 import { MatSliderDragEvent } from '@angular/material/slider';
@@ -9,6 +19,7 @@ import { MonacoService } from '../../../../../shared/shared-module/services/Mona
 import { RecordConfigService } from '../../../../../shared/shared-module/services/Record/record-config.service';
 import { PlaybackService } from '../../../../../shared/shared-module/services/Record/playback.service';
 import { TempStoreService } from '../../../../../shared/shared-module/services/Record/temp-store.service';
+import { MediaControlService } from 'src/app/shared/shared-module/services/media-control.service';
 
 // TODO: extract in separate interface
 interface TimeMark {
@@ -50,33 +61,39 @@ export class RecordComponent implements OnInit, AfterViewInit {
     private recordConfigService: RecordConfigService,
     private playbackService: PlaybackService,
     private tempStoreService: TempStoreService,
+    private mediaControlService: MediaControlService,
   ) { }
 
   ngOnInit() {
-    this.gitHubService.getRemoteTextOfFile().subscribe((data) => {
-      if (data) {
-        this.tempStoreService.setTempWholeText(data.path.split('/').join('\\'), data.text, true);
-        this.monacoService.setWholeTextInMonaco(data.text);
-      }
+
+    this.mediaControlService.getValueFromMediaControl().subscribe((value: boolean) => {
+      console.log(value);
     });
 
-    this.playbackService.currentOpenedFile$.subscribe((path) => {
-      this.currentFileName = path || '';
-    });
+    // this.gitHubService.getRemoteTextOfFile().subscribe((data) => {
+    //   if (data) {
+    //     this.tempStoreService.setTempWholeText(data.path.split('/').join('\\'), data.text, true);
+    //     this.monacoService.setWholeTextInMonaco(data.text);
+    //   }
+    // });
 
-    this.playbackService.isPlaying$.subscribe((isPlaying) => {
-      if (isPlaying === null) return;
+    // this.playbackService.currentOpenedFile$.subscribe((path) => {
+    //   this.currentFileName = path || '';
+    // });
 
-      this.sliderDisabled = !isPlaying;
-      this.onPlayPauseClick();
-    });
+    // this.playbackService.isPlaying$.subscribe((isPlaying) => {
+    //   if (isPlaying === null) return;
 
-    this.playbackService.playAgain$.subscribe((playAgain) => {
-      if (playAgain) {
-        this.tempStoreService.clearTemp();
-        this.getConfig();
-      }
-    });
+    //   this.sliderDisabled = !isPlaying;
+    //   this.onPlayPauseClick();
+    // });
+
+    // this.playbackService.playAgain$.subscribe((playAgain) => {
+    //   if (playAgain) {
+    //     this.tempStoreService.clearTemp();
+    //     this.getConfig();
+    //   }
+    // });
   }
 
   initCam(webcamRef: ElementRef | undefined) {
@@ -132,7 +149,9 @@ export class RecordComponent implements OnInit, AfterViewInit {
     } else {
       this.playbackService.pausePlayback();
     }
-  }
+  } test test test еуые 2 еуые 2 bla bla bla qwerqwer11112222333
+
+  hello world test yes
 
   private getFormattedTime(inputValueSeconds: number): string {
     const time = new Date(0);
@@ -160,6 +179,7 @@ export class RecordComponent implements OnInit, AfterViewInit {
   }
 
   private getConfig() {
+    console.log('GetConfigMethod');
     this.recordConfigService.getRecordConfigData().then((value) => {
       value.timeMarks.forEach((item) => {
         const position = ((item.timePoint.hours * 3600000 + item.timePoint.minutes * 60000 + item.timePoint.seconds * 1000 + item.timePoint.milliseconds) * 100) / (value.duration * 1000);

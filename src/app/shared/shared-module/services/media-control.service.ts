@@ -14,4 +14,8 @@ export class MediaControlService {
   getIsMouseOnDocument() {
     return this.isMouseOnDocument$ as Observable<boolean>;
   }
+
+  getValueFromMediaControl() {
+    return this.isMouseOnDocument$ as Observable<boolean>;
+  }
 }
