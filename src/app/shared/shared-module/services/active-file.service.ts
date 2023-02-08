@@ -14,4 +14,9 @@ export class ActiveFileService {
   testActiveFile(path: string) {
     return this.activeFilePath$.asObservable();
   }
+
+  /**
+   * This is the end of recording!
+   * 
+   */
 }

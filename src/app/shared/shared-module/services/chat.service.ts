@@ -29,6 +29,10 @@ export class ChatService {
     }
   }
 
+  testFunction_2(value: number) {
+    this.testVariable2$.next(value);
+  }
+
   testFunction(value: number) {
     this.testVariable2$.next(value);
   }
