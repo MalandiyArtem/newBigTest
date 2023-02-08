@@ -19,33 +19,11 @@ export class LiveStreamComponent implements OnInit, OnDestroy {
   ) {
   }
 
-  showMessage() {
-    console.log('This is a message from button');
-    const result = this.nextMethod(4, 6);
-    this.chatservice.testFunction_2(result);
-    console.log('[{ended result}]: ', result);
-  }
-
-  nextMethod(arg1: number, arg2: number) {
-    if (arg1 > arg2) {
-      return arg1 - arg2;
-    } else {
-      return arg1 - arg2;
-    }
-
-    // Unreachable code
-    return 0;
-  }
-
   ngOnInit(): void {
     this.chatservice.testFunction(1);
     this.chatservice.returnTestVariable().subscribe(value => {
       this.testVar = value;
     });
-
-    this.chatservice.returnTestVariable().subscribe((value: number) => {
-      this.testVar = value;
-    })
 
 
     const sessionID = this.convergenceService.getSessionId();
